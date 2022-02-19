@@ -1,0 +1,29 @@
+body {
+    font-family: "Slabo 27px", sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+div:last-of-type {
+    width: 350px;
+    height: 350px;
+    background: green;
+    display: block;
+    padding: 0px;
+    border-radius: 20px;
+}
+
+div:first-child {
+    background-color: red;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin: 30px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
