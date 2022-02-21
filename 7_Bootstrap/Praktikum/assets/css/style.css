@@ -1,0 +1,24 @@
+#content-body #breadcumb-wraper {
+    margin-top: 7em;
+}
+
+#content-body #breadcumb-wraper img {
+    width: 50px;
+}
+
+#content-body #breadcumb-wraper .text-uppercase,
+#content-body #breadcumb-wraper .text-lorem  {
+    font-size: 13px;
+}
+
+#content-body #info-wraper {
+    margin-top: 8em;
+}
+
+#content-body #info-wraper #content-info .title-info {
+    margin-top: 1.5em;
+}
+
+#content-body #info-wraper #content-info .desc-info {
+    width: 80%;
+}
