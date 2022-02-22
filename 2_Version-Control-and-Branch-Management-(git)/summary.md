@@ -17,7 +17,7 @@
 
 
 
-> Berikut Uraian dari Praktikum/esai
+## Berikut Uraian dari Praktikum/esai
 ##### [Link Github (network)](https://github.com/AbdAziz14/Altera.id/network)
 
 ##### Soal :
@@ -35,3 +35,6 @@
 10. ketika mulai maka github secara otomatis menggabungkan branch (contoh: branch develop dan branch fitur1)
 11. lalu jika ingin membuat branch fitur2 maka ikuti mulai dari langkah 6
 12. maka kita akan berhasil menyelesaikan Task Git
+
+> Output Network Github
+![jembatan](./Screenshots/network-git.png)
