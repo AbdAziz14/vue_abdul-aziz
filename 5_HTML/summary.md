@@ -7,3 +7,4 @@
 3. Mengetahui dan paham HTML merupakan hal dasar untuk membuat website
 
 > Resume Materi
+- Html adalah singkatan Hypertext Markup Languange
