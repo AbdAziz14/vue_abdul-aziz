@@ -43,4 +43,4 @@
 5.  untuk membuat form bisa menggunakan tag <form>
 6.  tag <form action="halaman lain"> untuk mejalankan form yang dieksekusi ke halaman lain
 7.  untuk membuat input bertipe text bisa menggunakan tag <input>
-8.  untuk membuat input pilihan menggunakan tag <select>
+8.  untuk membuat input pilihan menggunakan tag <select>`
