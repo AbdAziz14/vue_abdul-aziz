@@ -15,15 +15,15 @@
 <form action="welcome.html">
 
     <label for="firstname">First name :</label><br>
-    <input type="text" id="firstname"><br>
+    <input type="text" id="firstname" required><br>
     <br>
 
     <label for="lastname">Last name :</label><br>
-    <input type="text" id="lastname"><br>
+    <input type="text" id="lastname" required><br>
     <br>
 
     <label for="gender">Gender :</label><br>
-    <input type="radio" id="gender1">
+    <input type="radio" id="gender1" required>
     <label for="gender1">Male</label><br>
     <input type="radio" id="gender2">
     <label for="gender2">Female</label><br>
@@ -32,7 +32,7 @@
     <br>
 
     <label for="Nasionalty">Nasionalty :</label><br>
-    <select id="Nasionalty">
+    <select id="Nasionalty" required>
         <option value="Indonesia">Indonesia</option>
         <option value="USA">USA</option>
         <option value="Wakanda">Wakanda</option>
@@ -40,7 +40,7 @@
     <br>
 
     <label for="spoken">Language Spoken :</label><br>
-    <input type="checkbox" id="Language1">
+    <input type="checkbox" id="Language1" required>
     <label for="Language1">Bahasa Indonesia</label><br>
     <input type="checkbox" id="Language2">
     <label for="Language2">English</label><br>
@@ -49,7 +49,7 @@
     <br>
 
     <label for="bio">Bio :</label><br>
-    <textarea id="bio" cols="30" rows="10"></textarea><br>
+    <textarea id="bio" cols="30" rows="10" required></textarea><br>
     <br>
 
     <button type="submit">Sign UP</button>

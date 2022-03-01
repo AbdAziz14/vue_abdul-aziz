@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Javascript Refreshment - NO 1</title>
+</head>
+<body>
+<h1 style="text-align:center;">Task Javascript Refreshment</h1>
+<script>
+    var a = 5;
+    let b = "kampus merdeka";
+    const nama = "Budi";
+    let terdaftar = true;
+    let lengkap_arr = [a, b, nama, terdaftar];
+
+    function perkenalan() {
+        let asal = "indonesia";
+        return console.log(
+            "Perkenalkan nama saya  " + 
+                nama + 
+            " nomor Urutan " +
+                a +
+            " sekarang sedang mengikuti " + 
+                b +
+            " berasal dari " +
+                asal
+        );
+    }
+
+    if(terdaftar === true){
+        console.log(nama + " terdaftar sebagai kegiatan kampus merdeka");
+    }
+
+    // a = b;  
+    // nama = b;
+
+    // console.log("asal diakses = " + asal);
+    // console.log("a adalah = " + a);
+    // console.log("b adalah = " + b);
+
+    // jawaban no 1 A
+    // console.log(lengkap_arr[2]);
+
+    /* 
+    jawaban no 1 B
+        dengan mengubah value let terdaftar menjadi true
+        let terdaftar = true;
+    */
+
+    // jawaban no 1 C
+    // perkenalan();
+
+    /*
+    jawaban no 1 D
+        1.  dengan mengubah value let terdaftar menjadi true
+            let terdaftar = true;
+        2.  pilih index 2 pada arrat lengkap_arr lalu console log [console.log("array = " + lengkap_arr[2])]
+        3.  ubah var a menjadi b [ a = b; ] lalu console log [ console.log(a); ]
+        4. console log b [ console.log(b); ] karena tidak ada perubahan
+        5. panggil fungsi perkenalan [ perkenalan(); ]
+
+    */
+    console.log("array = " + lengkap_arr[2])
+    a = b;
+    console.log("a adalah " + a);
+    console.log("b adalah " + b);
+    perkenalan();
+
+</script>
+</body>
+</html>
