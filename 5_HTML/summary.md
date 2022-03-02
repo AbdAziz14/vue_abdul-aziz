@@ -33,7 +33,7 @@
 ##### [Link Soal](https://docs.google.com/document/d/1D4jp6mMxilyO1xC6n0FbAV-dg3e_YfbQv3JqHfe9Hd8/edit?usp=sharing)
 
 ##### Berikut Halaman Tasknya
-##### [index.html](./Praktikum/index.html){:target="_blank"}
+##### [index.html](./Praktikum/index.html)
 
 ##### Berikut Pembahasan :
 1.  untuk tag title menggunakan tag h1 - h6
