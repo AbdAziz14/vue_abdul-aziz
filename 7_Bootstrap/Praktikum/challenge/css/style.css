@@ -3,6 +3,10 @@
     --fraunces : 'Fraunces';
 }
 
+.navbar {
+    background-image: url('../images/desktop/image-header.jpg');
+}
+
 .navbar .navbar-title{
     font-family: var(--barlow);
     font-weight: bold;
@@ -41,7 +45,6 @@
 
 #header-wrapper .header-text {
     font-size: 5em;
-    margin-top: 1em;
     font-family: var(--fraunces);
     color: white;
     letter-spacing: 10px;
@@ -53,43 +56,43 @@
     line-height: 2em;
 }
 
-#content-wrapper .row .col-lg-6 img{
+.content-wrapper .row .col-lg-6 img{
     width: 100%;
 }
 
-#content-wrapper .content-box {
+.content-wrapper .content-box {
     padding: 15em;
 }
 
-#content-wrapper .content-box .content-box-title {
+.content-wrapper .content-box .content-box-title {
     font-family: var(--fraunces);
     font-size: 3em;
 }
 
-#content-wrapper .content-box .content-box-desc {
+.content-wrapper .content-box .content-box-desc {
     line-height: 2em;
     font-weight: 400;
 }
 
-#content-wrapper .content-box  .content-box-link {
+.content-wrapper .content-box  .content-box-link {
     font-family: var(--fraunces);
 }
 
-#content-wrapper .content-box .underline {
+.content-wrapper .content-box .underline {
     padding: 5px;
     background-color: #FED400;
     width: 115px;
     margin-top: -10px;
 }
 
-#content-wrapper .content-box .underline-2 {
+.content-wrapper .content-box .underline-2 {
     padding: 5px;
     background-color: #FE7364;
     width: 115px;
     margin-top: -10px;
 }
 
-#content-wrapper .content-writer {
+.content-wrapper .content-writer {
     position: absolute;
     top: 80%;
     text-align: center;
@@ -98,13 +101,13 @@
     transform: translate(-50%, -50%);
 }
 
-#content-wrapper .content-writer .content-writer-title {
+.content-wrapper .content-writer .content-writer-title {
     font-family: var(--fraunces);
     font-size: 2em;
     opacity: 0.8;
 }
 
-#content-wrapper .content-writer .content-writer-desc {
+.content-wrapper .content-writer .content-writer-desc {
     opacity: 0.5;
     line-height: 2em;
     margin-top: 2em;
@@ -166,4 +169,73 @@
 #footer-wrapper .footer-menu {
     color: #66a095;
     font-weight: 500;
+}
+
+#image-wrapper img {
+    max-width: 100%;
+}
+
+footer {
+    padding: 3rem;
+}
+
+.order-item-1 {
+    order: 2;
+}
+
+.order-item-2 {
+    order: 1;;
+}
+
+
+@media screen and (max-width: 767px){
+    #header-wrapper {
+        background-position: bottom;
+        height: 55vh;
+    }
+
+    #header-wrapper .header-text {
+        font-size: 2em;
+        margin-top: -1px;
+    }
+
+    #header-wrapper .header-icon i {
+        font-size: 3em;
+    }
+
+    .content-wrapper .content-box {
+        padding: 2em;
+    }
+
+    .content-wrapper .content-box .content-box-title {
+        font-size: 2em;
+    }
+
+
+    .row .position-relative {
+        height: 38vh;
+    }
+
+    .content-wrapper .content-writer {
+        width: 70%;
+        top: 65%;
+    }
+
+    #image-wrapper .col-sm-3 {
+        max-width: 50%;
+    }
+
+    footer {
+        padding: 0rem;
+        padding-top: 2em;
+    }
+
+    .order-item-2 {
+        order: 2;
+    }
+
+    .order-item-1 {
+        order: 1;
+    }
+
 }
