@@ -4,6 +4,25 @@ body {
     font-size: 20px;
 }
 
+div {
+    width: 100px;
+    height: 100px;
+    background: blue;
+    margin: 25px;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+div:first-child {
+    background-color: red;
+}
+
+div:nth-child(2) {
+    /* background-color: black; */
+    margin-left: 40px;
+}
+
 div:last-of-type {
     width: 350px;
     height: 350px;
@@ -12,18 +31,3 @@ div:last-of-type {
     padding: 0px;
     border-radius: 20px;
 }
-
-div:first-child {
-    background-color: red;
-}
-
-div {
-    width: 100px;
-    height: 100px;
-    background: blue;
-    margin: 30px;
-    padding: 20px;
-    text-align: center;
-    display: inline-block;
-}
-
