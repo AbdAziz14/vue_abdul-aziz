@@ -22,3 +22,9 @@
 #content-body #info-wraper #content-info .desc-info {
     width: 80%;
 }
+
+@media screen and (max-width: 767px){
+    footer {
+        text-align: center;
+    }
+}
