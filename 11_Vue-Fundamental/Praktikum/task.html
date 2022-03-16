@@ -31,11 +31,14 @@
             },
             methods: {
                 addTask: function(){
-                    if(this.toDoList.length < 4){
-                        this.toDoList.push(this.task);
-                        this.task = "";
-                    }else{
-                        this.message = "Hebat!";
+
+                    if(this.task){
+                        if(this.toDoList.length < 4){
+                            this.toDoList.push(this.task);
+                            this.task = "";
+                        }else{
+                            this.message = "Hebat!";
+                        }
                     }
                 }
             },
