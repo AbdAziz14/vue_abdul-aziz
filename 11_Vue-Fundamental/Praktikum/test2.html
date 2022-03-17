@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="app">
+      <div>{{ title }}</div>
+      <div>{{ splitTest }}</div>
+
+      <div>{{ splitTestMethod() }}</div>
+      
+      <ol>
+        <li v-for="todo in listTodo">
+          {{todo}}
+        </li>
+      </ol>
+      <input type="text" v-model:value="todo" />
+<!--       <button @click="tambahkan(todo)">Tambahkan</button>
+      <p v-if="listTodo.length>=4">Hebat!</p> -->
+
+      <p v-if="show">Hebat!</p>
+
+
+      <button @click="changeTitle(todo)">change title</button>
+      <button @click="splitTestMethod()">change subtitle</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>            
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+            title: "belajar vue",
+            subTitle: "subtitle vue",
+            todo: "",
+            listTodo: [],
+            show: false
+          },
+        computed: {
+          splitTest: function(){
+            const splitText = this.title.split(' ')
+            console.log("splitText: ", splitText)
+            return splitText[0]
+          }
+        },
+        watch: {
+          title: function(val) {
+            console.log("title val: ", val)
+            this.show = true
+          },
+          subTitle: function(val) {
+            console.log("subTitle val: ", val)
+          }
+        },
+        methods: {
+          splitTestMethod: function(){
+            const splitText = this.subTitle.split(' ')
+            console.log("split Text: ", splitText)
+            return splitText[0]
+          },
+          tambahkan(todo){
+            this.listTodo.push(todo);
+            this.todo="";
+          },
+          changeTitle(todo) {
+            console.log("button clicked")
+            this.title = todo
+          }
+        },
+      });
+
+      // vm.title = "vue belajar"
+    </script>
+  </body>
+</html>

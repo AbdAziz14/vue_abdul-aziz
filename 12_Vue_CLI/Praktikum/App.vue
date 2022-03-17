@@ -1,29 +1,29 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <div id="app">
+        <div class="todo-wrapper">
+            <ol>
+                <li v-for="todo in toDoList" :key="todo" >
+                    {{ todo }}
+                </li>
+            </ol>
 
-    <div class="todo-wrapper">
-        <ol>
-            <li v-for="todo in toDoList" :key="todo" >
-                {{ todo }}
-            </li>
-        </ol>
+            <input type="text" v-model="task">
+            <button @click="addTask">Tambahkan</button>
 
-        <input type="text" v-model="task">
-        <button @click="addTask">Tambahkan</button>
-
-        <p>{{ message }}</p>
+            <p v-if="limit === true">{{ message }}</p>
+        </div>
     </div>
-    
 </template>
 
 <script>
 
 export default {
-    name: 'App',
-    data() {
+  name: 'App',
+  data() {
         return {
-            message: '',
+            message: 'Hebat!!',
             toDoList: [],
+            limit: false,
             task: '',
         }
     },
@@ -35,18 +35,18 @@ export default {
                     this.toDoList.push(this.task);
                     this.task = "";
                 }else{
-                    this.message = "Hebat!";
+                    this.limit = true;
                 }
-            }else{
-                this.message = "Masih Kosong!";
             }
-
         }
     },
+  components: {
+    
+  }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -55,14 +55,11 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
-
 .todo-wrapper {
     width: 50%;
     margin: auto;
 }
-
 .todo-wrapper ol {
     list-style-position: inside;
 }
-
 </style>

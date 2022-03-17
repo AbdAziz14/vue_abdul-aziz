@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Vue Fundamental</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+
+        <ol>
+            <li v-for="item in toDoList">
+                {{ item }}
+            </li>
+        </ol>
+
+        <input type="text" v-model:value="task">
+        <button @click="addTask(task)">Tambahkan</button>
+        <p>{{ message }}</p>
+    </div>
+    
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                task: "",
+                message: "",
+                toDoList: [],
+            },
+            methods: {
+                addTask: function(taskTodo){
+                    // this.message = taskTodo;
+
+                    if(taskTodo){
+                        if(this.toDoList.length < 4){
+                            this.toDoList.push(taskTodo);
+                            this.task = "";
+                        }else{
+                            this.message = "Hebat!";
+                        }
+                    }
+
+                }
+            },
+        })
+    </script>
+</body>
+</html>
