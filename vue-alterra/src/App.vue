@@ -1,48 +1,80 @@
 <template>
     <div id="app">
-        <div class="todo-wrapper">
+        
+        <div class="todo-component-wrapper">
+            <h1>To Do List</h1>
             <ol>
-                <li v-for="todo in toDoList" :key="todo" >
-                    {{ todo }}
-                </li>
+                <ToDoListItem 
+                    v-for="(item, index ) in itemTodoList" 
+                    :key="index" 
+                    :title="item.todo" 
+                    :id="index"
+                    :edit="item.edit" 
+                    @HapusItemList="deleteItemList"
+                    @EditItemList="editItemList"
+                    @EditItemList2="editItemList2"
+                />
             </ol>
 
-            <input type="text" v-model="task">
-            <button @click="addTask">Tambahkan</button>
-
-            <p v-if="limit === true">{{ message }}</p>
+            <ToDoListForm 
+                :message="message"
+                @addItemToDo="addItemToList" 
+            />
+            
         </div>
+
     </div>
 </template>
 
 <script>
+import ToDoListForm from '@/components/TodoListForm.vue';
+import ToDoListItem from '@/components/ToDoListItem.vue';
 
 export default {
-  name: 'App',
-  data() {
+    name: 'App',
+    components: {
+        ToDoListForm,
+        ToDoListItem
+    },
+    data() {
         return {
-            message: 'Hebat!!',
-            toDoList: [],
-            limit: false,
-            task: '',
+            message : '',
+            itemTodoList: [],
         }
     },
     methods: {
-        addTask: function(){
-            
-            if(this.task){
-                if(this.toDoList.length < 4){
-                    this.toDoList.push(this.task);
-                    this.task = "";
-                }else{
-                    this.limit = true;
-                }
+        addItemToList: function(itemToDo){
+            if(itemToDo !== ''){
+                this.itemTodoList.push({ todo: itemToDo, edit: 0 })
+            }else{
+                this.message = "Masukan Inputan To Do !!"
             }
+        },
+        deleteItemList: function(id){
+            this.itemTodoList.splice(id, 1);
+        },
+        editItemList: function(id){
+            this.itemTodoList.filter(function(value, index){
+                if(index == id){
+                    if(value.edit === 0){
+                        return value.edit = 1;
+                    }else{
+                        return value.edit = 0;
+                    }
+                }
+            })
+        },
+        editItemList2: function(id, newtodo){
+            this.itemTodoList.filter(function(value, index){
+                if(index == id){
+                    if(value.edit === 1){
+                        return value.todo = newtodo;
+                    }
+                }
+            })
+            this.editItemList(id);
         }
     },
-  components: {
-    
-  }
 }
 </script>
 
@@ -51,15 +83,7 @@ export default {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #2c3e50;
     margin-top: 60px;
-}
-.todo-wrapper {
-    width: 50%;
-    margin: auto;
-}
-.todo-wrapper ol {
-    list-style-position: inside;
 }
 </style>
