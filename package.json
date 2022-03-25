@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/AbdAziz14/vue_abdul-aziz/issues"
   },
-  "homepage": "https://github.com/AbdAziz14/vue_abdul-aziz#readme"
+  "homepage": "https://github.com/AbdAziz14/vue_abdul-aziz#readme",
+  "dependencies": {}
 }
