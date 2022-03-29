@@ -33,3 +33,11 @@
 > Taks Vue Helpers
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1vIg9QGpVCP-5p7dXrPikuk2OuxAThkV0eYn8NfKZNWM/edit#slide=id.g8bce5440c3_0_0)
+
+#### Jawaban
+#### [To Do List App](../todo-list/src/App.vue)
+
+#### SS Output
+![kodingan](./Screenshots/todoview.png)
+![kodingan](./Screenshots/detail1.png)
+![kodingan](./Screenshots/detail2.png)
