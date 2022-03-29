@@ -20,17 +20,22 @@ export default {
   },
   data () {
     return {
-      ListTaskToDo: [{ todo: 'test', isEdit: 0 }]
+      ListTaskToDo: []
     }
+  },
+  created () {
+    this.ListTaskToDo = this.$store.state.todolist.todoListGlobal
   },
   methods: {
     addInputToList (taskTodo) {
       if (taskTodo !== '') {
-        this.ListTaskToDo.push({ todo: taskTodo, isEdit: 0 })
+        this.$store.dispatch('todolist/addNewTask', taskTodo)
+        this.getGlobalTodoListState()
       }
     },
     deleteItemList (id) {
-      this.ListTaskToDo.splice(id, 1)
+      this.$store.dispatch('todolist/deleteTask', id)
+      this.getGlobalTodoListState()
     },
     editItemList (id) {
       this.ListTaskToDo.filter(function (value, index) {
@@ -43,6 +48,8 @@ export default {
         }
         return value
       })
+      this.$store.dispatch('todolist/editTask', this.ListTaskToDo)
+      this.getGlobalTodoListState()
     },
     editItemListNew (id, newtodo) {
       this.ListTaskToDo.filter(function (value, index) {
@@ -54,6 +61,9 @@ export default {
         return value
       })
       this.editItemList(id)
+    },
+    getGlobalTodoListState () {
+      this.ListTaskToDo = this.$store.state.todolist.todoListGlobal
     }
   }
 }

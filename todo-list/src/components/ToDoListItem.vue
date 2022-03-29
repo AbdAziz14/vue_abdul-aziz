@@ -2,10 +2,10 @@
   <li class="todolist-item">
     <div class="label-group">
       <label v-if="todoList.isEdit === 0">
-        {{ todoList.todo }}
+        <router-link :to="{ name: 'todoDetailView', params: { detailId: id } }">{{ todoList.todo }}</router-link>
       </label>
       <label v-if="todoList.isEdit === 1">
-        <input type="text" ref="inputedit" v-bind:value="todoList.todo ">
+        <input type="text" ref="inputedit" v-bind:value="todoList.todo">
       </label>
     </div>
     <div class="button-group">
