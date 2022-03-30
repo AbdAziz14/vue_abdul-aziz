@@ -1,5 +1,21 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <DetailNews :News='newsList' />
   </div>
 </template>
+
+<script>
+import DetailNews from '@/components/NewsDetail.vue'
+
+export default {
+  name: 'DetailNewsView',
+  components: {
+    DetailNews
+  },
+  computed: {
+    newsList () {
+      return this.$store.state.news.detail
+    }
+  }
+}
+</script>
