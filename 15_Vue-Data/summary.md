@@ -31,9 +31,13 @@
     -   Otoritasi :
         -   Pengguna A mengirimkan kredensial yang biasanya berupa kombinasi username dan password, jika cocok maka server akan mengirim akses token di mana token tersebut adalah pembuktian mutlak kalau pengguna A adalah pengguna A bukan pengguna B, C atau yang lain.
 
-> Taks Vue Helpers
+> Taks Vue Data
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1tN3kmiJbsFtmUFuI2j_CfHTSu0dunRH6BlQJE-wrg_Y/edit#slide=id.g8bce5440c3_0_0)
 
 #### Jawaban
 #### [To Do List App](../news-app/src/App.vue)
+
+#### SS Output
+![kodingan](./Screenshots/home.png)
+![kodingan](./Screenshots/detail.png)
