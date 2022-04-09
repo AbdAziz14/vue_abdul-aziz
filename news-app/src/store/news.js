@@ -19,11 +19,17 @@ const mutations = {
 }
 
 const actions = {
-  getFetchList (store) {
-    axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=972166aca1084391895817cac572cbe4')
+  async getFetchList (store, params) {
+    let link = 'https://newsapi.org/v2/everything?q=indonesia&apiKey=972166aca1084391895817cac572cbe4'
+    if (params) {
+      if (params === 'top-headline') {
+        link = 'https://newsapi.org/v2/top-headlines?country=id&apiKey=972166aca1084391895817cac572cbe4'
+      }
+    }
+    await axios.get(link)
       .then(Response => {
         store.commit('setNewsList', Response.data.articles)
-        store.commit('setInfo', '')
+        store.commit('setInfo', 'Ada kok')
       })
       .catch((error) => {
         store.commit('setInfo', error)

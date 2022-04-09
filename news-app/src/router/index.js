@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import DefaultLayout from '@/layout/defaultLayout.vue'
-import defaulView from '@/views/defaultView.vue'
+import DefaultView from '@/views/defaultView.vue'
 
 Vue.use(VueRouter)
 
@@ -14,11 +14,21 @@ const routes = [
       {
         path: '',
         name: 'Home',
-        component: defaulView,
+        component: DefaultView,
         children: [
           {
-            path: 'news',
-            name: 'NewsView',
+            path: '',
+            name: 'HomeAll',
+            component: HomeView
+          },
+          {
+            path: '/detail',
+            name: 'detail',
+            component: () => import('../views/AboutView.vue')
+          },
+          {
+            path: '/:type',
+            name: 'HomeType',
             component: HomeView
           }
         ]
