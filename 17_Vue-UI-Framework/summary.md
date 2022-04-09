@@ -34,3 +34,9 @@
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1Nam6PscwR5EwW4vs9LkBiKQU-1mqr_68xxHyQ_14LIM/edit)
 
+#### Jawaban
+#### [Vue Quality Control](../news-app/src/App.vue)
+
+#### SS Output
+![kodingan](./Screenshots/home.png)
+![kodingan](./Screenshots/detail.png)
