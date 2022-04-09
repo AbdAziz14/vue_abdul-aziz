@@ -1,10 +1,16 @@
 <template>
-  <div class="home">
-    <h1 class="home-title">Berita Terkini</h1>
-    <p>{{ getinfo }}</p>
-    <div class="news-wrapper">
-      <NewsPage v-for="(value, index) in newsList" :key="index" :News="value" />
-    </div>
+  <div class="home-wrapper pa-10">
+    <v-row>
+      <v-col
+        v-for="(value, index) in newsList" :key="index"
+        cols="12"
+        xs="12"
+        sm="6"
+        lg="4"
+      >
+        <NewsPage :News="value" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
@@ -18,6 +24,9 @@ export default {
   },
   computed: {
     newsList () {
+      if (this.$route.params.type) {
+        this.$store.dispatch('news/getFetchList', this.$route.params.type)
+      }
       return this.$store.state.news.newsList
     },
     getinfo () {
@@ -25,25 +34,11 @@ export default {
     }
   },
   mounted () {
-    this.$store.dispatch('news/getFetchList')
+    if (this.$route.params.type) {
+      this.$store.dispatch('news/getFetchList', this.$route.params.type)
+    } else {
+      this.$store.dispatch('news/getFetchList')
+    }
   }
 }
 </script>
-
-<style scoped>
-* {
-  box-sizing: border-box;
-}
-.home {
-  margin-top: 5em;
-}
-.home-title {
-  font-size: 5em;
-}
-.news-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 0;
-}
-</style>

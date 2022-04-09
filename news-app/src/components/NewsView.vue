@@ -1,13 +1,36 @@
 <template>
-  <div class="news" @click="toDetail">
-    <div class="news-image">
-      <img v-bind:src="News.urlToImage" alt="">
-    </div>
-    <div class="news-content">
-      <label class="author" v-html="News.author"></label>
-      <label class="title">{{ News.title }}</label>
-      <label class="published">{{ News.publishedAt }}</label>
-    </div>
+  <div class="news pa-3">
+    <v-card>
+      <v-img
+        v-bind:src="News.urlToImage"
+        height="250px"
+      ></v-img>
+      <v-card-title>
+        {{ News.title }}
+      </v-card-title>
+      <v-card-text>
+        <v-row
+          align="center"
+          class="mx-0"
+        >
+          <div class="grey--text text-caption">
+            {{ News.publishedAt }}
+          </div>
+        </v-row>
+        <div class="my-4 text-subtitle-2" v-html="News.author"></div>
+      </v-card-text>
+
+      <v-card-actions>
+        <v-btn
+          color="primary"
+          text
+          @click="toDetail"
+        >
+          Detail
+        </v-btn>
+    </v-card-actions>
+
+    </v-card>
   </div>
 </template>
 
@@ -17,6 +40,9 @@ export default {
   props: {
     News: Object
   },
+  data: () => ({
+    show: false
+  }),
   methods: {
     toDetail () {
       this.$store.dispatch('news/addDetail', this.News)
@@ -27,7 +53,7 @@ export default {
 </script>
 
 <style>
-.news {
+/* .news {
   padding: 20px;
   flex: 48%;
   margin: 15px;
@@ -72,5 +98,5 @@ export default {
   .content {
     flex: 100%;
   }
-}
+} */
 </style>
