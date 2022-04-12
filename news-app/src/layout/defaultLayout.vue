@@ -1,5 +1,5 @@
 <template>
-  <v-app id="layout-wrapper">
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
       app
