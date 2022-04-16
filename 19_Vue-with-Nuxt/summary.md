@@ -33,4 +33,5 @@
 ##### [Link Soal](https://docs.google.com/presentation/d/1mCytOsTqyzEuFrnaKMhe3U-5CTH4K9MNQoPxjmWB-qI/edit#slide=id.g8bce5440c3_0_0)
 
 #### Jawaban
-#### [news app netlify](../news-nuxt/pages/index.vue)
+#### [news app with Nuxt](../news-nuxt/pages/index.vue)
+#### [news app netlify](https://news-app-nuxt-abd-aziz.netlify.app/)
