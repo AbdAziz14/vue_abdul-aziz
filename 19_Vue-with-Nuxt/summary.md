@@ -28,7 +28,7 @@
 -   PWA
     -   Kepanjangan dari Progressive Web Apps, dibuat dan disempurnakan dengan API modern untuk menghadirkan peningkatan kemampuan, keandalan, dan kemudahan pemasangan sekaligus menjangkau siapa saja, di mana saja, di perangkat apa pun dengan basis kode tunggal.
 
-> Taks Vue Quality Control
+> Taks Vue With Nuxt
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1mCytOsTqyzEuFrnaKMhe3U-5CTH4K9MNQoPxjmWB-qI/edit#slide=id.g8bce5440c3_0_0)
 
