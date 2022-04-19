@@ -1,0 +1,37 @@
+/*
+Query get data by status keterangan
+    query MyQuery {
+        kampus_merdeka_Anggota(where: {Keterangans: {status: {_eq: true}}}) {
+            nama
+            Keterangans(where: {status: {_eq: true}}) {
+                nilai
+                pelajaran
+            }
+        }
+    }
+*/
+
+{
+    "data": {
+        "kampus_merdeka_Anggota": [
+            {
+            "nama": "Budi",
+            "Keterangans": [
+                {
+                "nilai": 85,
+                "pelajaran": "Sistem Informasi"
+                }
+            ]
+            },
+            {
+            "nama": "Sita",
+            "Keterangans": [
+                {
+                "nilai": 90,
+                "pelajaran": "Sistem Informasi"
+                }
+            ]
+            }
+        ]
+    }
+}
