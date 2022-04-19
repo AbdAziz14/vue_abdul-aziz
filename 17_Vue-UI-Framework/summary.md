@@ -1,5 +1,5 @@
 ## Resume Materi 
-### Vue Quality Control
+### Vue UI Framework
 
 > Tuliskan 3 poin yang dipelajari dari materi tersebut. Resume / ringkasan materi dapat disubmit melalui Github
 1. UI Framework sangat membantu UI Sebuah aplikasi vue kita
@@ -30,7 +30,7 @@
     -   Perubahan ukuran yang menyesuaikan dengan lebar layar tampilan
     -   Cara kerja : Lebar layar dibagi menjadi beberapa golongan dan setiap komponen dapat ditentukan ukurannya berdasarkan golongan tersebut
 
-> Taks Vue Quality Control
+> Taks Vue UI Framework
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1Nam6PscwR5EwW4vs9LkBiKQU-1mqr_68xxHyQ_14LIM/edit)
 

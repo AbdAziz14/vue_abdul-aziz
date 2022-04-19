@@ -18,7 +18,7 @@
 
 
 
-> Taks Vue Quality Control
+> Taks Introduction Algorithm
 #### Soal
 ##### [Link Soal](https://docs.google.com/document/d/1QEwLv53ARo-Gsl4URZfZ9v1e6rDpK9lQn6XdswkgV7A/edit#heading=h.19ihxai8kiry)
 

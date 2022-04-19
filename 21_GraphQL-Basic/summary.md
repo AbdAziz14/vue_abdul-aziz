@@ -17,7 +17,7 @@
         3.  Subscription  => mendapatkan data realtime berdasarkan event tertentu
 
 
-> Taks Vue Quality Control
+> Taks Understanding GraphQL Basic
 #### Soal
 ##### [Link Soal](https://docs.google.com/document/d/1JFNrbzTj03DPHLANU_SXRf6eg5ENRC8g9V37WRlW9Tw/edit)
 

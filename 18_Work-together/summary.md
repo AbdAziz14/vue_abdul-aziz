@@ -39,7 +39,7 @@
         1.  Dokcer
         2.  Travis CI
 
-> Taks Vue Quality Control
+> Taks Work Together With Product - Backend and Devops
 #### Soal
 ##### [Link Soal](https://docs.google.com/presentation/d/1dkoqToBiaAwEYG60QoKOCATf0bFQHlgmuWrgk9SDH_o/edit?usp=sharing)
 
