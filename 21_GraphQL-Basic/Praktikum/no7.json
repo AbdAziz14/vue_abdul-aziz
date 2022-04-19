@@ -1,0 +1,61 @@
+/*
+mutation MyMutation($objects: [kampus_merdeka_Keterangan_insert_input!] = {}, $object1: kampus_merdeka_Keterangan_insert_input = {}) {
+    insert_kampus_merdeka_Keterangan_one(object: $object1) {
+        status
+        id_anggota
+        nilai
+        pelajaran
+    }
+}
+*/
+
+{
+    "data": {
+        "insert_kampus_merdeka_Keterangan_one": {
+            "status": true,
+            "id_anggota": 3,
+            "nilai": 90,
+            "pelajaran": "Sistem Informasi"
+        }
+    }
+}
+
+{
+    "object1": {
+        "id_anggota": 3,
+        "pelajaran": "React",
+        "nilai": 55,
+        "status": false
+    }
+}
+
+{
+    "object1": {
+        "id_anggota": 3,
+        "pelajaran": "Sistem Informasi",
+        "nilai": 90,
+        "status": true
+    }
+}
+
+{
+    "data": {
+        "insert_kampus_merdeka_Keterangan_one": {
+            "status": true,
+            "id_anggota": 3,
+            "nilai": 90,
+            "pelajaran": "Sistem Informasi"
+        }
+    }
+}
+
+{
+  "data": {
+    "insert_kampus_merdeka_Keterangan_one": {
+      "status": false,
+      "id_anggota": 3,
+      "nilai": 55,
+      "pelajaran": "React"
+    }
+  }
+}
