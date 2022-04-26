@@ -22,6 +22,11 @@ const routes = [
     name: 'todoDetailView',
     component: TodoDetailView,
     props: true
+  },
+  {
+    path: '/apollo',
+    name: 'ApolloView',
+    component: () => import('../views/ApolloView.vue')
   }
 ]
 

@@ -16,5 +16,8 @@
     "url": "https://github.com/AbdAziz14/vue_abdul-aziz/issues"
   },
   "homepage": "https://github.com/AbdAziz14/vue_abdul-aziz#readme",
-  "dependencies": {}
+  "dependencies": {
+    "apollo-link-ws": "^1.0.20",
+    "subscriptions-transport-ws": "^0.11.0"
+  }
 }
