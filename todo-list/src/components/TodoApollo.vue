@@ -1,16 +1,17 @@
 <template>
   <li class="todolist-item">
     <div class="label-group">
-      <label v-if="todoList.isEdit === 0">
-        <router-link :to="{ name: 'todoDetailView', params: { detailId: id } }">{{ todoList.todo }}</router-link>
+      <label v-if="isEdit === 0">
+        {{ todoList.text }}
       </label>
-      <label v-if="todoList.isEdit === 1">
-        <input type="text" ref="inputedit" v-bind:value="todoList.text">
+      {{ todoList.text }}
+      <label v-if="isEdit === 1">
+        <input type="text" ref="inputedit" v-bind:value="todoList.todo">
       </label>
     </div>
     <div class="button-group">
-      <button v-if="todoList.isEdit === 0" class="edit" @click="editItemList(id)">Edit</button>
-      <button v-if="todoList.isEdit === 1" class="edit" @click="editItemListNew(id)">Masukan Edit</button>
+      <button v-if="isEdit === 0" class="edit" @click="editItemList(id)">Edit</button>
+      <button v-if="isEdit === 1" class="edit" @click="editItemListNew(id)">Masukan Edit</button>
       <button class="delete" @click="deleteItemList(id)">Hapus</button>
     </div>
   </li>
@@ -18,10 +19,15 @@
 
 <script>
 export default {
-  name: 'ListTaskToDo',
+  name: 'TodoApollo',
   props: {
     todoList: Object,
     id: Number
+  },
+  data () {
+    return {
+      isEdit: 0
+    }
   },
   methods: {
     deleteItemList (listIndex) {
